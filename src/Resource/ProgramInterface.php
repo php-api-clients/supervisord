@@ -11,7 +11,12 @@ interface ProgramInterface extends ResourceInterface
     /**
      * @return string
      */
-    public function description(): string;
+    public function group(): string;
+
+    /**
+     * @return string
+     */
+    public function name(): string;
 
     /**
      * @return int
@@ -21,52 +26,7 @@ interface ProgramInterface extends ResourceInterface
     /**
      * @return string
      */
-    public function stderrLogfile(): string;
-
-    /**
-     * @return int
-     */
-    public function stop(): int;
-
-    /**
-     * @return string
-     */
-    public function logfile(): string;
-
-    /**
-     * @return int
-     */
-    public function exitstatus(): int;
-
-    /**
-     * @return string
-     */
-    public function spawnerr(): string;
-
-    /**
-     * @return int
-     */
-    public function now(): int;
-
-    /**
-     * @return string
-     */
-    public function group(): string;
-
-    /**
-     * @return string
-     */
-    public function name(): string;
-
-    /**
-     * @return string
-     */
-    public function statename(): string;
-
-    /**
-     * @return int
-     */
-    public function start(): int;
+    public function description(): string;
 
     /**
      * @return int
@@ -76,5 +36,45 @@ interface ProgramInterface extends ResourceInterface
     /**
      * @return string
      */
+    public function statename(): string;
+
+    /**
+     * @return int
+     */
+    public function now(): int;
+
+    /**
+     * @return int
+     */
+    public function start(): int;
+
+    /**
+     * @return int
+     */
+    public function stop(): int;
+
+    /**
+     * @return string
+     */
+    public function spawnerr(): string;
+
+    /**
+     * @return int
+     */
+    public function exitstatus(): int;
+
+    /**
+     * @return string
+     */
+    public function logfile(): string;
+
+    /**
+     * @return string
+     */
     public function stdoutLogfile(): string;
+
+    /**
+     * @return string
+     */
+    public function stderrLogfile(): string;
 }

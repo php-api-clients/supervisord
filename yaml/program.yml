@@ -1,16 +1,16 @@
 class: Program
 properties:
-  description: string
-  pid: int
-  stderr_logfile: string
-  stop: int
-  logfile: string
-  exitstatus: int
-  spawnerr: string
-  now: int
   group: string
   name: string
-  statename: string
-  start: int
+  pid: int
+  description: string
   state: int
+  statename: string
+  now: int
+  start: int
+  stop: int
+  spawnerr: string
+  exitstatus: int
+  logfile: string
   stdout_logfile: string
+  stderr_logfile: string
