@@ -2,12 +2,14 @@
 
 namespace ApiClients\Client\Supervisord\Resource\Async;
 
+use ApiClients\Client\Supervisord\CommandBus\Command\ProgramCommand;
 use ApiClients\Client\Supervisord\Resource\Program as BaseProgram;
+use React\Promise\PromiseInterface;
 
 class Program extends BaseProgram
 {
-    public function refresh(): Program
+    public function refresh(): PromiseInterface
     {
-        throw new \Exception('TODO: create refresh method!');
+        return $this->handleCommand(new ProgramCommand($this->name));
     }
 }
