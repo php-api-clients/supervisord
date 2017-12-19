@@ -4,31 +4,31 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8fa70008a0071b1b087240eda94a1d0",
+    "content-hash": "aa621c9d69764fdb5e1c11700b6088fd",
     "packages": [
         {
             "name": "api-clients/client-services",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/client-services.git",
-                "reference": "d33482017be7f40b41adcad2dd0d378c4348835d"
+                "reference": "a2c4d317b822455a291be6a51a89fded710d984b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/client-services/zipball/d33482017be7f40b41adcad2dd0d378c4348835d",
-                "reference": "d33482017be7f40b41adcad2dd0d378c4348835d",
+                "url": "https://api.github.com/repos/php-api-clients/client-services/zipball/a2c4d317b822455a291be6a51a89fded710d984b",
+                "reference": "a2c4d317b822455a291be6a51a89fded710d984b",
                 "shasum": ""
             },
             "require": {
                 "api-clients/hydrator": "^1.0",
-                "api-clients/middleware-json": "^3.0 || ^2.0 || ^1.0",
                 "api-clients/rx": "^2.1",
-                "api-clients/transport": "^3.0 || ^2.0 || ^1.0",
+                "api-clients/transport": "^3.1",
                 "igorw/get-in": "^1.0",
                 "php": "^7.0"
             },
             "require-dev": {
+                "api-clients/middleware-json": "^3.1",
                 "api-clients/test-utilities": "^3.0.1"
             },
             "type": "library",
@@ -48,7 +48,7 @@
                 }
             ],
             "description": "Generic client services",
-            "time": "2017-07-22T22:17:30+00:00"
+            "time": "2017-12-19T21:52:26+00:00"
         },
         {
             "name": "api-clients/command-bus",
@@ -338,21 +338,22 @@
         },
         {
             "name": "api-clients/middleware-json",
-            "version": "3.0.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-json.git",
-                "reference": "06ff9b18cb107856b5af77db4da27b9227d84ec1"
+                "reference": "b67b4ba93b3a2693c472b53c9c781bc96722e687"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-json/zipball/06ff9b18cb107856b5af77db4da27b9227d84ec1",
-                "reference": "06ff9b18cb107856b5af77db4da27b9227d84ec1",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-json/zipball/b67b4ba93b3a2693c472b53c9c781bc96722e687",
+                "reference": "b67b4ba93b3a2693c472b53c9c781bc96722e687",
                 "shasum": ""
             },
             "require": {
                 "api-clients/json": "^1.0",
                 "api-clients/middleware": "^4.0",
+                "api-clients/transport": "^3.1",
                 "clue/buzz-react": "^2.0 || ^1.4",
                 "php": "^7.0",
                 "psr/http-message": "^1.0",
@@ -378,7 +379,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2017-09-16T12:40:27+00:00"
+            "time": "2017-12-19T21:36:15+00:00"
         },
         {
             "name": "api-clients/middleware-user-agent",
@@ -430,16 +431,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-xml.git",
-                "reference": "ab1c148fad513d53dc357d1377c165b5e4a3b88a"
+                "reference": "4469ea3978820e27c7816a33d7efa763d48c3941"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-xml/zipball/ab1c148fad513d53dc357d1377c165b5e4a3b88a",
-                "reference": "ab1c148fad513d53dc357d1377c165b5e4a3b88a",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-xml/zipball/4469ea3978820e27c7816a33d7efa763d48c3941",
+                "reference": "4469ea3978820e27c7816a33d7efa763d48c3941",
                 "shasum": ""
             },
             "require": {
                 "api-clients/middleware": "^4.0",
+                "api-clients/transport": "^3.1",
                 "fillup/array2xml": "^0.5.1",
                 "php": "^7.0",
                 "ringcentral/psr7": "^1.2",
@@ -465,7 +467,7 @@
                 }
             ],
             "description": "Middleware taking care of encoding and decoding XML bodies",
-            "time": "2017-12-17T22:08:04+00:00"
+            "time": "2017-12-19T21:04:42+00:00"
         },
         {
             "name": "api-clients/psr7-http-status-exceptions",
@@ -598,16 +600,16 @@
         },
         {
             "name": "api-clients/transport",
-            "version": "3.0.4",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/transport.git",
-                "reference": "4b4ca831ba49ec047afbce05e4863147ebfff6a7"
+                "reference": "c0e9696cbdea99e1ca12495c75ea566bb8502108"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/transport/zipball/4b4ca831ba49ec047afbce05e4863147ebfff6a7",
-                "reference": "4b4ca831ba49ec047afbce05e4863147ebfff6a7",
+                "url": "https://api.github.com/repos/php-api-clients/transport/zipball/c0e9696cbdea99e1ca12495c75ea566bb8502108",
+                "reference": "c0e9696cbdea99e1ca12495c75ea566bb8502108",
                 "shasum": ""
             },
             "require": {
@@ -652,7 +654,7 @@
                 }
             ],
             "description": "Middleware infused clue/buzz-react",
-            "time": "2017-12-17T21:24:27+00:00"
+            "time": "2017-12-19T20:58:17+00:00"
         },
         {
             "name": "clue/block-react",

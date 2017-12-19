@@ -17,7 +17,7 @@
         "api-clients/middleware-user-agent": "^2.0",
         "api-clients/middleware-xml": "dev-master",
         "api-clients/rx": "^2.2",
-        "api-clients/transport": "^3.0",
+        "api-clients/transport": "^3.1",
         "fillup/array2xml": "^0.5.1",
         "verdant/xml2array": "dev-master#b518d755a305fb4249027d20f8e9042bb733b857"
     },

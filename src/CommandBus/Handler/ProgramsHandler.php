@@ -58,7 +58,7 @@ final class ProgramsHandler
                 ],
             ])
         ))->then(function (ResponseInterface $response) {
-            $xml = $response->getBody()->getXml();
+            $xml = $response->getBody()->getParsedContents();
             $xml = $xml['methodResponse']['params']['param']['value']['array']['data']['value'];
 
             if (key($xml) === 'struct') {

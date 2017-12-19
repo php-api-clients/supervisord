@@ -68,7 +68,7 @@ final class ProgramHandler
                 ],
             ])
         ))->then(function (ResponseInterface $response) {
-            $program = $response->getBody()->getXml();
+            $program = $response->getBody()->getParsedContents();
             $program = $program['methodResponse']['params']['param']['value']['struct']['member'];
             return resolve(
                 $this->hydrator->hydrate(
