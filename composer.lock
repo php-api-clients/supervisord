@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa621c9d69764fdb5e1c11700b6088fd",
+    "content-hash": "58b9b13ca1d8925d0b62572190de03fd",
     "packages": [
         {
             "name": "api-clients/client-services",
@@ -203,46 +203,6 @@
             "time": "2017-11-30T01:34:35+00:00"
         },
         {
-            "name": "api-clients/json",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-api-clients/json.git",
-                "reference": "38d40981b2bef5429abb32b116b299bc8aa08ad4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/json/zipball/38d40981b2bef5429abb32b116b299bc8aa08ad4",
-                "reference": "38d40981b2bef5429abb32b116b299bc8aa08ad4",
-                "shasum": ""
-            },
-            "require": {
-                "daverandom/exceptional-json": "^1.0.1",
-                "php": "^7.0",
-                "wyrihaximus/ticking-promise": "^1.6"
-            },
-            "require-dev": {
-                "api-clients/test-utilities": "^3.0.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ApiClients\\Tools\\Json\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "ceesjank@gmail.com"
-                }
-            ],
-            "time": "2017-04-16T19:26:22+00:00"
-        },
-        {
             "name": "api-clients/middleware",
             "version": "4.0.0",
             "source": {
@@ -337,51 +297,6 @@
             "time": "2017-09-16T12:50:26+00:00"
         },
         {
-            "name": "api-clients/middleware-json",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-api-clients/middleware-json.git",
-                "reference": "b67b4ba93b3a2693c472b53c9c781bc96722e687"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-json/zipball/b67b4ba93b3a2693c472b53c9c781bc96722e687",
-                "reference": "b67b4ba93b3a2693c472b53c9c781bc96722e687",
-                "shasum": ""
-            },
-            "require": {
-                "api-clients/json": "^1.0",
-                "api-clients/middleware": "^4.0",
-                "api-clients/transport": "^3.1",
-                "clue/buzz-react": "^2.0 || ^1.4",
-                "php": "^7.0",
-                "psr/http-message": "^1.0",
-                "ringcentral/psr7": "^1.2",
-                "wyrihaximus/ticking-promise": "^1.6"
-            },
-            "require-dev": {
-                "api-clients/test-utilities": "^3.0.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ApiClients\\Middleware\\Json\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "ceesjank@gmail.com"
-                }
-            ],
-            "time": "2017-12-19T21:36:15+00:00"
-        },
-        {
             "name": "api-clients/middleware-user-agent",
             "version": "2.0.0",
             "source": {
@@ -427,25 +342,24 @@
         },
         {
             "name": "api-clients/middleware-xml",
-            "version": "dev-master",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-xml.git",
-                "reference": "4469ea3978820e27c7816a33d7efa763d48c3941"
+                "reference": "4c3a002ff2f16d37ac65f5d51e54bd217ce222d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-xml/zipball/4469ea3978820e27c7816a33d7efa763d48c3941",
-                "reference": "4469ea3978820e27c7816a33d7efa763d48c3941",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-xml/zipball/4c3a002ff2f16d37ac65f5d51e54bd217ce222d3",
+                "reference": "4c3a002ff2f16d37ac65f5d51e54bd217ce222d3",
                 "shasum": ""
             },
             "require": {
                 "api-clients/middleware": "^4.0",
                 "api-clients/transport": "^3.1",
-                "fillup/array2xml": "^0.5.1",
+                "openlss/lib-array2xml": "^0.5.1",
                 "php": "^7.0",
-                "ringcentral/psr7": "^1.2",
-                "verdant/xml2array": "dev-master#b518d755a305fb4249027d20f8e9042bb733b857"
+                "ringcentral/psr7": "^1.2"
             },
             "require-dev": {
                 "api-clients/test-utilities": "^4.1"
@@ -467,7 +381,7 @@
                 }
             ],
             "description": "Middleware taking care of encoding and decoding XML bodies",
-            "time": "2017-12-19T21:04:42+00:00"
+            "time": "2017-12-20T21:42:42+00:00"
         },
         {
             "name": "api-clients/psr7-http-status-exceptions",
@@ -797,41 +711,6 @@
             "time": "2017-02-14T19:40:03+00:00"
         },
         {
-            "name": "daverandom/exceptional-json",
-            "version": "v1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/DaveRandom/ExceptionalJSON.git",
-                "reference": "7dfa85369633669d9694cbc79db005268718f15a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/DaveRandom/ExceptionalJSON/zipball/7dfa85369633669d9694cbc79db005268718f15a",
-                "reference": "7dfa85369633669d9694cbc79db005268718f15a",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ExceptionalJSON\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Wright"
-                }
-            ],
-            "description": "JSON encoding and decoding that throws exceptions on failure",
-            "time": "2017-05-31T16:37:55+00:00"
-        },
-        {
             "name": "doctrine/annotations",
             "version": "v1.4.0",
             "source": {
@@ -1065,42 +944,6 @@
                 "event-emitter"
             ],
             "time": "2017-07-23T21:35:13+00:00"
-        },
-        {
-            "name": "fillup/array2xml",
-            "version": "0.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fillup/array2xml.git",
-                "reference": "5ba10b911e62d65d43ef4d405bfcc6ff4ae46dbc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fillup/array2xml/zipball/5ba10b911e62d65d43ef4d405bfcc6ff4ae46dbc",
-                "reference": "5ba10b911e62d65d43ef4d405bfcc6ff4ae46dbc",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.24"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "fillup\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Phillip Shipley",
-                    "email": "phillip.shipley@gmail.com"
-                }
-            ],
-            "description": "Library for converting arrays to XML",
-            "time": "2016-10-14T15:38:30+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1580,6 +1423,55 @@
             "time": "2017-11-24T11:07:03+00:00"
         },
         {
+            "name": "openlss/lib-array2xml",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nullivex/lib-array2xml.git",
+                "reference": "c8b5998a342d7861f2e921403f44e0a2f3ef2be0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nullivex/lib-array2xml/zipball/c8b5998a342d7861f2e921403f44e0a2f3ef2be0",
+                "reference": "c8b5998a342d7861f2e921403f44e0a2f3ef2be0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LSS": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Bryan Tong",
+                    "email": "contact@nullivex.com",
+                    "homepage": "http://bryantong.com"
+                },
+                {
+                    "name": "Tony Butler",
+                    "email": "spudz76@gmail.com",
+                    "homepage": "http://openlss.org"
+                }
+            ],
+            "description": "Array2XML conversion library credit to lalit.org",
+            "homepage": "http://openlss.org",
+            "keywords": [
+                "array",
+                "array conversion",
+                "xml",
+                "xml conversion"
+            ],
+            "time": "2016-11-10T19:10:18+00:00"
+        },
+        {
             "name": "php-di/invoker",
             "version": "1.3.3",
             "source": {
@@ -1823,37 +1715,43 @@
         },
         {
             "name": "react/cache",
-            "version": "v0.4.1",
+            "version": "v0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/cache.git",
-                "reference": "558f614891341b1d817a8cdf9a358948ec49638f"
+                "reference": "75494f26b4ef089db9bf8c90b63c296246e099e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/cache/zipball/558f614891341b1d817a8cdf9a358948ec49638f",
-                "reference": "558f614891341b1d817a8cdf9a358948ec49638f",
+                "url": "https://api.github.com/repos/reactphp/cache/zipball/75494f26b4ef089db9bf8c90b63c296246e099e8",
+                "reference": "75494f26b4ef089db9bf8c90b63c296246e099e8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "react/promise": "~2.0|~1.1"
             },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
+            },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "React\\Cache\\": "src\\"
+                    "React\\Cache\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Async caching.",
+            "description": "Async, Promise-based cache interface for ReactPHP",
             "keywords": [
-                "cache"
+                "cache",
+                "caching",
+                "promise",
+                "reactphp"
             ],
-            "time": "2016-02-25T18:17:16+00:00"
+            "time": "2017-12-20T16:47:13+00:00"
         },
         {
             "name": "react/dns",
@@ -2358,38 +2256,6 @@
                 "uri"
             ],
             "time": "2016-03-25T17:36:49+00:00"
-        },
-        {
-            "name": "verdant/xml2array",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/rentpost/xml2array.git",
-                "reference": "b518d755a305fb4249027d20f8e9042bb733b857"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/rentpost/xml2array/zipball/b518d755a305fb4249027d20f8e9042bb733b857",
-                "reference": "b518d755a305fb4249027d20f8e9042bb733b857",
-                "shasum": ""
-            },
-            "require": {
-                "lib-libxml": "*",
-                "lib-pcre": "*",
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Verdant\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "description": "Convert from XML to array, array to XML, based on libs from lalit.org",
-            "time": "2015-04-23T03:08:15+00:00"
         },
         {
             "name": "wyrihaximus/doctrine-annotation-autoloader",
@@ -5333,10 +5199,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "api-clients/middleware-xml": 20,
-        "verdant/xml2array": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

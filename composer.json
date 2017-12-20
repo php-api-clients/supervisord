@@ -13,13 +13,10 @@
         "api-clients/client-services": "^1.3",
         "api-clients/foundation": "^1.0",
         "api-clients/middleware-http-exceptions": "^2.0",
-        "api-clients/middleware-json": "^3.0",
         "api-clients/middleware-user-agent": "^2.0",
-        "api-clients/middleware-xml": "dev-master",
+        "api-clients/middleware-xml": "^1.0",
         "api-clients/rx": "^2.2",
-        "api-clients/transport": "^3.1",
-        "fillup/array2xml": "^0.5.1",
-        "verdant/xml2array": "dev-master#b518d755a305fb4249027d20f8e9042bb733b857"
+        "api-clients/transport": "^3.1"
     },
     "require-dev": {
         "api-clients/resource-generator": "^1.0",
