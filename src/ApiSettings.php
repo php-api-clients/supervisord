@@ -7,14 +7,13 @@ namespace ApiClients\Client\Supervisord;
 use ApiClients\Foundation\Hydrator\Options as HydratorOptions;
 use ApiClients\Foundation\Options as FoundationOptions;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
-use ApiClients\Middleware\Debug\DebugMiddleware;
 use ApiClients\Middleware\HttpExceptions\HttpExceptionsMiddleware;
 use ApiClients\Middleware\UserAgent\Options as UserAgentMiddlewareOptions;
 use ApiClients\Middleware\UserAgent\UserAgentMiddleware;
 use ApiClients\Middleware\UserAgent\UserAgentStrategies;
-use function ApiClients\Foundation\options_merge;
 use ApiClients\Middleware\Xml\XmlDecodeMiddleware;
 use ApiClients\Middleware\Xml\XmlEncodeMiddleware;
+use function ApiClients\Foundation\options_merge;
 
 final class ApiSettings
 {
@@ -37,9 +36,9 @@ final class ApiSettings
                 UserAgentMiddleware::class => [
                     UserAgentMiddlewareOptions::STRATEGY => UserAgentStrategies::PACKAGE_VERSION,
                     UserAgentMiddlewareOptions::PACKAGE => 'api-clients/supervisord',
-                ]
-            ]
-        ]
+                ],
+            ],
+        ],
     ];
 
     public static function getOptions(string $host, array $suppliedOptions, string $suffix): array

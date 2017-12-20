@@ -8,11 +8,8 @@ use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Foundation\ClientInterface;
 use ApiClients\Foundation\Factory;
 use ApiClients\Foundation\Resource\ResourceInterface;
-use ApiClients\Skeleton\CommandBus\Command\MethodCommand;
-use ApiClients\Skeleton\CommandBus\Command\StreamCommand;
 use React\EventLoop\LoopInterface;
 use React\Promise\CancellablePromiseInterface;
-use React\Promise\PromiseInterface;
 use Rx\Observable;
 use function ApiClients\Tools\Rx\unwrapObservableFromPromise;
 

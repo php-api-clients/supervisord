@@ -4,8 +4,8 @@ use ApiClients\Client\Supervisord\AsyncClient;
 use ApiClients\Client\Supervisord\Resource\Async\Program;
 use ApiClients\Client\Supervisord\Resource\ProgramInterface;
 use React\EventLoop\Factory;
-use function ApiClients\Foundation\resource_pretty_print;
 use Rx\Observable;
+use function ApiClients\Foundation\resource_pretty_print;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 
