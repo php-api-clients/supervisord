@@ -1,11 +1,11 @@
 # Supervisord HTTP API Client for PHP 7
 
-[![Build Status](https://travis-ci.org/php-api-clients/scrutinizerd.svg?branch=master)](https://travis-ci.org/php-api-clients/scrutinizerd)
-[![Latest Stable Version](https://poser.pugx.org/api-clients/scrutinizerd/v/stable.png)](https://packagist.org/packages/api-clients/scrutinizerd)
-[![Total Downloads](https://poser.pugx.org/api-clients/scrutinizerd/downloads.png)](https://packagist.org/packages/api-clients/scrutinizerd)
-[![Code Coverage](https://scrutinizer-ci.com/g/php-api-clients/scrutinizerd/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/php-api-clients/scrutinizerd/?branch=master)
-[![License](https://poser.pugx.org/api-clients/scrutinizerd/license.png)](https://packagist.org/packages/api-clients/scrutinizerd)
-[![PHP 7 ready](http://php7ready.timesplinter.ch/php-api-clients/scrutinizerd/badge.svg)](https://travis-ci.org/php-api-clients/scrutinizerd)
+[![Build Status](https://travis-ci.org/php-api-clients/supervisord.svg?branch=master)](https://travis-ci.org/php-api-clients/supervisord)
+[![Latest Stable Version](https://poser.pugx.org/api-clients/supervisord/v/stable.png)](https://packagist.org/packages/api-clients/supervisord)
+[![Total Downloads](https://poser.pugx.org/api-clients/supervisord/downloads.png)](https://packagist.org/packages/api-clients/supervisord)
+[![Code Coverage](https://scrutinizer-ci.com/g/php-api-clients/supervisord/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/php-api-clients/supervisord/?branch=master)
+[![License](https://poser.pugx.org/api-clients/supervisord/license.png)](https://packagist.org/packages/api-clients/supervisord)
+[![PHP 7 ready](http://php7ready.timesplinter.ch/php-api-clients/supervisord/badge.svg)](https://travis-ci.org/php-api-clients/supervisord)
 
 # License
 
