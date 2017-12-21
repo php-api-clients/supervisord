@@ -30,4 +30,13 @@ class Program extends BaseProgram
     {
         return $this->handleCommand(new StopCommand($this->name));
     }
+
+    public function restart(): PromiseInterface
+    {
+        return $this->disable()->then(function () {
+            return $this->enable();
+        })->then(function () {
+            return $this->refresh();
+        });
+    }
 }
