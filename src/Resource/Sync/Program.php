@@ -14,4 +14,25 @@ class Program extends BaseProgram
             return $program->refresh();
         }));
     }
+
+    public function enable(): bool
+    {
+        return $this->wait($this->handleCommand(new BuildAsyncFromSyncCommand(self::HYDRATE_CLASS, $this))->then(function (ProgramInterface $program) {
+            return $program->enable();
+        }));
+    }
+
+    public function disable(): bool
+    {
+        return $this->wait($this->handleCommand(new BuildAsyncFromSyncCommand(self::HYDRATE_CLASS, $this))->then(function (ProgramInterface $program) {
+            return $program->disable();
+        }));
+    }
+
+    public function restart(): Program
+    {
+        return $this->wait($this->handleCommand(new BuildAsyncFromSyncCommand(self::HYDRATE_CLASS, $this))->then(function (ProgramInterface $program) {
+            return $program->restart();
+        }));
+    }
 }
