@@ -133,7 +133,7 @@ abstract class Program extends AbstractResource implements ProgramInterface
      */
     public function now(): int
     {
-        return $this->now;
+        return (int)$this->now;
     }
 
     /**
@@ -141,7 +141,7 @@ abstract class Program extends AbstractResource implements ProgramInterface
      */
     public function start(): int
     {
-        return $this->start;
+        return (int)$this->start;
     }
 
     /**
@@ -149,7 +149,7 @@ abstract class Program extends AbstractResource implements ProgramInterface
      */
     public function stop(): int
     {
-        return $this->stop;
+        return (int)$this->stop;
     }
 
     /**
