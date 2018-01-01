@@ -52,16 +52,16 @@
         },
         {
             "name": "api-clients/command-bus",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/command-bus.git",
-                "reference": "e1d9145b09d5e79094fd42260fb3ee1e8d77a13b"
+                "reference": "b3974b5a1ebe3c391b728c59542bfa4231902531"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/command-bus/zipball/e1d9145b09d5e79094fd42260fb3ee1e8d77a13b",
-                "reference": "e1d9145b09d5e79094fd42260fb3ee1e8d77a13b",
+                "url": "https://api.github.com/repos/php-api-clients/command-bus/zipball/b3974b5a1ebe3c391b728c59542bfa4231902531",
+                "reference": "b3974b5a1ebe3c391b728c59542bfa4231902531",
                 "shasum": ""
             },
             "require": {
@@ -69,7 +69,7 @@
                 "igorw/get-in": "^1.0",
                 "joshdifabio/composed": "^1.0",
                 "league/tactician": "^1.0",
-                "league/tactician-container": "^1.0",
+                "league/tactician-container": "^2.0 || ^1.0",
                 "php": "^7.0",
                 "react/event-loop": "^1.0 || ^0.5 || ^0.4.2",
                 "wyrihaximus/tactician-command-handler-mapper": "^1.0",
@@ -96,7 +96,7 @@
                 }
             ],
             "description": "Light weight wrapper around league/tactician adding promised based interface(s) and next tick execution",
-            "time": "2017-11-01T16:24:52+00:00"
+            "time": "2017-12-24T23:31:24+00:00"
         },
         {
             "name": "api-clients/foundation",
@@ -342,22 +342,22 @@
         },
         {
             "name": "api-clients/middleware-xml",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-xml.git",
-                "reference": "4c3a002ff2f16d37ac65f5d51e54bd217ce222d3"
+                "reference": "8e31745816095806f4ae6a4d92a6e11147dfa8fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-xml/zipball/4c3a002ff2f16d37ac65f5d51e54bd217ce222d3",
-                "reference": "4c3a002ff2f16d37ac65f5d51e54bd217ce222d3",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-xml/zipball/8e31745816095806f4ae6a4d92a6e11147dfa8fa",
+                "reference": "8e31745816095806f4ae6a4d92a6e11147dfa8fa",
                 "shasum": ""
             },
             "require": {
                 "api-clients/middleware": "^4.0",
                 "api-clients/transport": "^3.1",
-                "openlss/lib-array2xml": "^0.5.1",
+                "api-clients/xml": "^1.0",
                 "php": "^7.0",
                 "ringcentral/psr7": "^1.2"
             },
@@ -381,7 +381,7 @@
                 }
             ],
             "description": "Middleware taking care of encoding and decoding XML bodies",
-            "time": "2017-12-20T21:42:42+00:00"
+            "time": "2017-12-31T22:42:04+00:00"
         },
         {
             "name": "api-clients/psr7-http-status-exceptions",
@@ -569,6 +569,47 @@
             ],
             "description": "Middleware infused clue/buzz-react",
             "time": "2017-12-19T20:58:17+00:00"
+        },
+        {
+            "name": "api-clients/xml",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/xml.git",
+                "reference": "a1de50a322ff83ba286f4ded27e55025c0314945"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/xml/zipball/a1de50a322ff83ba286f4ded27e55025c0314945",
+                "reference": "a1de50a322ff83ba286f4ded27e55025c0314945",
+                "shasum": ""
+            },
+            "require": {
+                "openlss/lib-array2xml": "^0.5.1",
+                "php": "^7.0",
+                "wyrihaximus/ticking-promise": "^1.6"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^4.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Tools\\Xml\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "description": "Services taking care of encoding and decoding XML bodies",
+            "time": "2017-12-31T22:23:57+00:00"
         },
         {
             "name": "clue/block-react",
@@ -1157,25 +1198,25 @@
         },
         {
             "name": "league/tactician-container",
-            "version": "v1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/tactician-container.git",
-                "reference": "4b75997f6655a574c4b950c7c91714fde9f31d84"
+                "reference": "d1a5d884e072b8cafbff802d07766076eb2ffcb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/tactician-container/zipball/4b75997f6655a574c4b950c7c91714fde9f31d84",
-                "reference": "4b75997f6655a574c4b950c7c91714fde9f31d84",
+                "url": "https://api.github.com/repos/thephpleague/tactician-container/zipball/d1a5d884e072b8cafbff802d07766076eb2ffcb0",
+                "reference": "d1a5d884e072b8cafbff802d07766076eb2ffcb0",
                 "shasum": ""
             },
             "require": {
-                "container-interop/container-interop": "^1.1",
                 "league/tactician": "^1.0",
-                "php": ">=5.5"
+                "php": ">=5.5",
+                "psr/container": "^1.0"
             },
             "require-dev": {
-                "league/container": "~2.0",
+                "league/container": "~2.3",
                 "phpunit/phpunit": "~4.3",
                 "squizlabs/php_codesniffer": "~2.0"
             },
@@ -1195,7 +1236,7 @@
                     "homepage": "http://futurepixels.co.uk"
                 }
             ],
-            "description": "Tactician integration for any container implementing the container-interop interface",
+            "description": "Tactician integration for any container implementing PSR-11",
             "keywords": [
                 "container",
                 "container-interop",
@@ -1204,7 +1245,7 @@
                 "league",
                 "tactician"
             ],
-            "time": "2015-12-31T12:41:26+00:00"
+            "time": "2017-04-13T06:27:12+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1931,16 +1972,16 @@
         },
         {
             "name": "react/promise-stream",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-stream.git",
-                "reference": "77ca2a233db59d671864c88e2b716d875cfbeb1f"
+                "reference": "00e269d611e9c9a29356aef64c07f7e513e73dc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-stream/zipball/77ca2a233db59d671864c88e2b716d875cfbeb1f",
-                "reference": "77ca2a233db59d671864c88e2b716d875cfbeb1f",
+                "url": "https://api.github.com/repos/reactphp/promise-stream/zipball/00e269d611e9c9a29356aef64c07f7e513e73dc9",
+                "reference": "00e269d611e9c9a29356aef64c07f7e513e73dc9",
                 "shasum": ""
             },
             "require": {
@@ -1950,7 +1991,7 @@
             },
             "require-dev": {
                 "clue/block-react": "^1.0",
-                "phpunit/phpunit": "^4.8",
+                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35",
                 "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3",
                 "react/promise-timer": "^1.0"
             },
@@ -1983,20 +2024,20 @@
                 "stream",
                 "unwrap"
             ],
-            "time": "2017-11-28T18:31:39+00:00"
+            "time": "2017-12-22T12:02:05+00:00"
         },
         {
             "name": "react/promise-timer",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-timer.git",
-                "reference": "3bc527fbd1201a193ab41c19b9a770d71a3514af"
+                "reference": "9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/3bc527fbd1201a193ab41c19b9a770d71a3514af",
-                "reference": "3bc527fbd1201a193ab41c19b9a770d71a3514af",
+                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd",
+                "reference": "9b4cd9cbe7457e0d87fe8aa7ccceab8a2c830fbd",
                 "shasum": ""
             },
             "require": {
@@ -2005,7 +2046,7 @@
                 "react/promise": "~2.1|~1.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.0 || ^4.8"
+                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
             },
             "type": "library",
             "autoload": {
@@ -2026,7 +2067,7 @@
                     "email": "christian@lueck.tv"
                 }
             ],
-            "description": "Trivial timeout implementation for Promises",
+            "description": "A trivial implementation of timeouts for Promises, built on top of ReactPHP.",
             "homepage": "https://github.com/react/promise-timer",
             "keywords": [
                 "async",
@@ -2036,20 +2077,20 @@
                 "timeout",
                 "timer"
             ],
-            "time": "2017-08-08T16:30:19+00:00"
+            "time": "2017-12-22T15:41:41+00:00"
         },
         {
             "name": "react/socket",
-            "version": "v0.8.6",
+            "version": "v0.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/socket.git",
-                "reference": "2e8660111d14df908a913a058bce4a1786de489f"
+                "reference": "49bca29df739f4e288ba2abfed9cac93de1bfff6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/2e8660111d14df908a913a058bce4a1786de489f",
-                "reference": "2e8660111d14df908a913a058bce4a1786de489f",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/49bca29df739f4e288ba2abfed9cac93de1bfff6",
+                "reference": "49bca29df739f4e288ba2abfed9cac93de1bfff6",
                 "shasum": ""
             },
             "require": {
@@ -2083,20 +2124,20 @@
                 "reactphp",
                 "stream"
             ],
-            "time": "2017-11-18T16:47:56+00:00"
+            "time": "2017-12-24T11:28:59+00:00"
         },
         {
             "name": "react/stream",
-            "version": "v0.7.5",
+            "version": "v0.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "a41bbffdda5e3f4282012f8e346cef48ecb28b24"
+                "reference": "4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/a41bbffdda5e3f4282012f8e346cef48ecb28b24",
-                "reference": "a41bbffdda5e3f4282012f8e346cef48ecb28b24",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d",
+                "reference": "4e07a0014896cbbb73e2f2b2c28e86174b6e1d4d",
                 "shasum": ""
             },
             "require": {
@@ -2107,9 +2148,6 @@
             "require-dev": {
                 "clue/stream-filter": "~1.2",
                 "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
-            },
-            "suggest": {
-                "react/event-loop": "^0.4"
             },
             "type": "library",
             "autoload": {
@@ -2132,7 +2170,7 @@
                 "stream",
                 "writable"
             ],
-            "time": "2017-11-20T11:55:48+00:00"
+            "time": "2017-12-21T14:12:01+00:00"
         },
         {
             "name": "reactivex/rxphp",
