@@ -21,7 +21,7 @@
     "require-dev": {
         "api-clients/resource-generator": "^1.0",
         "api-clients/resource-test-utilities": "^1.0",
-        "api-clients/test-utilities": "4.1"
+        "api-clients/test-utilities": "^4.3"
     },
     "autoload": {
         "psr-4": {
