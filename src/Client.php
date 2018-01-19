@@ -48,6 +48,17 @@ final class Client implements ClientInterface
     }
 
     /**
+     * @return int
+     */
+    public function pid(): int
+    {
+        return await(
+            $this->client->pid(),
+            $this->loop
+        );
+    }
+
+    /**
      * @return array
      */
     public function programs(): array

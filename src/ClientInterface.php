@@ -6,5 +6,7 @@ namespace ApiClients\Client\Supervisord;
 
 interface ClientInterface
 {
+    public function pid(): int;
+
     public function programs(): array;
 }
