@@ -51,6 +51,7 @@ matrix:
 install:
   - composer validate
   - if [ -z "$dropPlatform" ]; then composer config --unset platform.php; fi;
+  - if [ -z "$dropPlatform" ]; then composer update --lock; fi;
   - if [ -z "$qaExtended" ]; then phpenv config-rm xdebug.ini || :; fi;
   - if [ -z "$dependencies" ]; then composer install --prefer-dist; fi;
   - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest --prefer-dist -n; fi;
