@@ -8,5 +8,9 @@ interface ClientInterface
 {
     public function pid(): int;
 
+    public function restart(): bool;
+
+    public function shutdown(): bool;
+
     public function programs(): array;
 }

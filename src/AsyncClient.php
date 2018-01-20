@@ -6,6 +6,8 @@ namespace ApiClients\Client\Supervisord;
 
 use ApiClients\Client\Supervisord\CommandBus\Command\PidCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
+use ApiClients\Client\Supervisord\CommandBus\Command\RestartCommand;
+use ApiClients\Client\Supervisord\CommandBus\Command\ShutdownCommand;
 use ApiClients\Foundation\ClientInterface;
 use ApiClients\Foundation\Factory;
 use ApiClients\Foundation\Resource\ResourceInterface;
@@ -65,6 +67,16 @@ final class AsyncClient implements AsyncClientInterface
     public function pid(): CancellablePromiseInterface
     {
         return $this->client->handle(new PidCommand());
+    }
+
+    public function restart(): CancellablePromiseInterface
+    {
+        return $this->client->handle(new RestartCommand());
+    }
+
+    public function shutdown(): CancellablePromiseInterface
+    {
+        return $this->client->handle(new ShutdownCommand());
     }
 
     public function programs(): Observable

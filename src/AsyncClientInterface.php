@@ -11,5 +11,9 @@ interface AsyncClientInterface
 {
     public function pid(): CancellablePromiseInterface;
 
+    public function shutdown(): CancellablePromiseInterface;
+
+    public function restart(): CancellablePromiseInterface;
+
     public function programs(): Observable;
 }

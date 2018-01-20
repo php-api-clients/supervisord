@@ -59,6 +59,28 @@ final class Client implements ClientInterface
     }
 
     /**
+     * @return bool
+     */
+    public function restart(): bool
+    {
+        return await(
+            $this->client->restart(),
+            $this->loop
+        );
+    }
+
+    /**
+     * @return bool
+     */
+    public function shutdown(): bool
+    {
+        return await(
+            $this->client->shutdown(),
+            $this->loop
+        );
+    }
+
+    /**
      * @return array
      */
     public function programs(): array
