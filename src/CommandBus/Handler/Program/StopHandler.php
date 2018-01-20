@@ -42,13 +42,7 @@ final class StopHandler
         return $this->service->call(
             'supervisor.stopProcess',
             [
-                [
-                    'param' => [
-                        'value' => [
-                            'string' => $command->getName(),
-                        ],
-                    ],
-                ],
+                $command->getName(),
             ]
         )->then(function (array $xml) {
             $result = $xml['value']['boolean'];

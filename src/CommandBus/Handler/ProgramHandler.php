@@ -43,13 +43,7 @@ final class ProgramHandler
         return $this->service->call(
             'supervisor.getProcessInfo',
             [
-                [
-                    'param' => [
-                        'value' => [
-                            'string' => $command->getName(),
-                        ],
-                    ],
-                ],
+                $command->getName(),
             ]
         )->then(function (array $xml) {
             $program = $xml['value']['struct']['member'];

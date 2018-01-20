@@ -42,13 +42,7 @@ final class StartHandler
         return $this->service->call(
             'supervisor.startProcess',
             [
-                [
-                    'param' => [
-                        'value' => [
-                            'string' => $command->getName(),
-                        ],
-                    ],
-                ],
+                $command->getName(),
             ]
         )->then(function (array $xml) {
             $result = $xml['value']['boolean'];
