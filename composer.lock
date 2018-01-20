@@ -617,12 +617,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/xml-rpc-service.git",
-                "reference": "4a299334a3375f8e391878205aa5a0e000bd3cfc"
+                "reference": "262efd7191c0cc79223a7dc3582a6af3ef570968"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/xml-rpc-service/zipball/4a299334a3375f8e391878205aa5a0e000bd3cfc",
-                "reference": "4a299334a3375f8e391878205aa5a0e000bd3cfc",
+                "url": "https://api.github.com/repos/php-api-clients/xml-rpc-service/zipball/262efd7191c0cc79223a7dc3582a6af3ef570968",
+                "reference": "262efd7191c0cc79223a7dc3582a6af3ef570968",
                 "shasum": ""
             },
             "require": {
@@ -650,7 +650,7 @@
                 }
             ],
             "description": "Service for making XML RPC requests",
-            "time": "2018-01-20T19:30:50+00:00"
+            "time": "2018-01-20T20:15:32+00:00"
         },
         {
             "name": "clue/block-react",
