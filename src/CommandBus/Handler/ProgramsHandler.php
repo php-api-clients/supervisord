@@ -7,18 +7,15 @@ namespace ApiClients\Client\Supervisord\CommandBus\Handler;
 use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Client\Supervisord\Resource\ProgramInterface;
 use ApiClients\Foundation\Hydrator\Hydrator;
-use ApiClients\Foundation\Transport\Service\RequestService;
-use ApiClients\Middleware\Xml\XmlStream;
-use Psr\Http\Message\ResponseInterface;
+use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
-use RingCentral\Psr7\Request;
 use function ApiClients\Tools\Rx\observableFromArray;
 use function React\Promise\resolve;
 
 final class ProgramsHandler
 {
     /**
-     * @var RequestService
+     * @var XmlRpcService
      */
     private $service;
 
@@ -28,10 +25,10 @@ final class ProgramsHandler
     private $hydrator;
 
     /**
-     * @param RequestService $service
-     * @param Hydrator       $hydrator
+     * @param XmlRpcService $service
+     * @param Hydrator      $hydrator
      */
-    public function __construct(RequestService $service, Hydrator $hydrator)
+    public function __construct(XmlRpcService $service, Hydrator $hydrator)
     {
         $this->service = $service;
         $this->hydrator = $hydrator;
@@ -43,18 +40,8 @@ final class ProgramsHandler
      */
     public function handle(ProgramsCommand $command): PromiseInterface
     {
-        return $this->service->request(new Request(
-            'POST',
-            '',
-            [],
-            new XmlStream([
-                'methodCall' => [
-                    'methodName' => 'supervisor.getAllProcessInfo',
-                ],
-            ])
-        ))->then(function (ResponseInterface $response) {
-            $xml = $response->getBody()->getParsedContents();
-            $xml = $xml['methodResponse']['params']['param']['value']['array']['data']['value'];
+        return $this->service->call('supervisor.getAllProcessInfo')->then(function (array $xml) {
+            $xml = $xml['value']['array']['data']['value'];
 
             if (key($xml) === 'struct') {
                 $xml = [$xml];

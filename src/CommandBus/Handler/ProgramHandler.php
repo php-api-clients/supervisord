@@ -8,17 +8,14 @@ use ApiClients\Client\Supervisord\CommandBus\Command\ProgramCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Client\Supervisord\Resource\ProgramInterface;
 use ApiClients\Foundation\Hydrator\Hydrator;
-use ApiClients\Foundation\Transport\Service\RequestService;
-use ApiClients\Middleware\Xml\XmlStream;
-use Psr\Http\Message\ResponseInterface;
+use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
-use RingCentral\Psr7\Request;
 use function React\Promise\resolve;
 
 final class ProgramHandler
 {
     /**
-     * @var RequestService
+     * @var XmlRpcService
      */
     private $service;
 
@@ -28,10 +25,10 @@ final class ProgramHandler
     private $hydrator;
 
     /**
-     * @param RequestService $service
-     * @param Hydrator       $hydrator
+     * @param XmlRpcService $service
+     * @param Hydrator      $hydrator
      */
-    public function __construct(RequestService $service, Hydrator $hydrator)
+    public function __construct(XmlRpcService $service, Hydrator $hydrator)
     {
         $this->service = $service;
         $this->hydrator = $hydrator;
@@ -43,27 +40,19 @@ final class ProgramHandler
      */
     public function handle(ProgramCommand $command): PromiseInterface
     {
-        return $this->service->request(new Request(
-            'POST',
-            '',
-            [],
-            new XmlStream([
-                'methodCall' => [
-                    'methodName' => 'supervisor.getProcessInfo',
-                    'params' => [
-                        [
-                            'param' => [
-                                'value' => [
-                                    'string' => $command->getName(),
-                                ],
-                            ],
+        return $this->service->call(
+            'supervisor.getProcessInfo',
+            [
+                [
+                    'param' => [
+                        'value' => [
+                            'string' => $command->getName(),
                         ],
                     ],
                 ],
-            ])
-        ))->then(function (ResponseInterface $response) {
-            $program = $response->getBody()->getParsedContents();
-            $program = $program['methodResponse']['params']['param']['value']['struct']['member'];
+            ]
+        )->then(function (array $xml) {
+            $program = $xml['value']['struct']['member'];
 
             return resolve(
                 $this->hydrator->hydrate(

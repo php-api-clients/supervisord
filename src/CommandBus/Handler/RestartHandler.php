@@ -5,24 +5,21 @@ declare(strict_types=1);
 namespace ApiClients\Client\Supervisord\CommandBus\Handler;
 
 use ApiClients\Client\Supervisord\CommandBus\Command\RestartCommand;
-use ApiClients\Foundation\Transport\Service\RequestService;
-use ApiClients\Middleware\Xml\XmlStream;
-use Psr\Http\Message\ResponseInterface;
+use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
-use RingCentral\Psr7\Request;
 use function React\Promise\resolve;
 
 final class RestartHandler
 {
     /**
-     * @var RequestService
+     * @var XmlRpcService
      */
     private $service;
 
     /**
-     * @param RequestService $service
+     * @param XmlRpcService $service
      */
-    public function __construct(RequestService $service)
+    public function __construct(XmlRpcService $service)
     {
         $this->service = $service;
     }
@@ -33,18 +30,8 @@ final class RestartHandler
      */
     public function handle(RestartCommand $command): PromiseInterface
     {
-        return $this->service->request(new Request(
-            'POST',
-            '',
-            [],
-            new XmlStream([
-                'methodCall' => [
-                    'methodName' => 'supervisor.restart',
-                ],
-            ])
-        ))->then(function (ResponseInterface $response) {
-            $status = $response->getBody()->getParsedContents();
-            $status = (bool)$status['methodResponse']['params']['param']['value']['boolean'];
+        return $this->service->call('supervisor.restart')->then(function (array $xml) {
+            $status = (bool)$xml['value']['boolean'];
 
             return resolve($status);
         });

@@ -7,17 +7,14 @@ namespace ApiClients\Client\Supervisord\CommandBus\Handler\Program;
 use ApiClients\Client\Supervisord\CommandBus\Command\Program\StartCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Foundation\Hydrator\Hydrator;
-use ApiClients\Foundation\Transport\Service\RequestService;
-use ApiClients\Middleware\Xml\XmlStream;
-use Psr\Http\Message\ResponseInterface;
+use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
-use RingCentral\Psr7\Request;
 use function React\Promise\resolve;
 
 final class StartHandler
 {
     /**
-     * @var RequestService
+     * @var XmlRpcService
      */
     private $service;
 
@@ -27,10 +24,10 @@ final class StartHandler
     private $hydrator;
 
     /**
-     * @param RequestService $service
-     * @param Hydrator       $hydrator
+     * @param XmlRpcService $service
+     * @param Hydrator      $hydrator
      */
-    public function __construct(RequestService $service, Hydrator $hydrator)
+    public function __construct(XmlRpcService $service, Hydrator $hydrator)
     {
         $this->service = $service;
         $this->hydrator = $hydrator;
@@ -42,27 +39,19 @@ final class StartHandler
      */
     public function handle(StartCommand $command): PromiseInterface
     {
-        return $this->service->request(new Request(
-            'POST',
-            '',
-            [],
-            new XmlStream([
-                'methodCall' => [
-                    'methodName' => 'supervisor.startProcess',
-                    'params' => [
-                        [
-                            'param' => [
-                                'value' => [
-                                    'string' => $command->getName(),
-                                ],
-                            ],
+        return $this->service->call(
+            'supervisor.startProcess',
+            [
+                [
+                    'param' => [
+                        'value' => [
+                            'string' => $command->getName(),
                         ],
                     ],
                 ],
-            ])
-        ))->then(function (ResponseInterface $response) {
-            $result = $response->getBody()->getParsedContents();
-            $result = $result['methodResponse']['params']['param']['value']['boolean'];
+            ]
+        )->then(function (array $xml) {
+            $result = $xml['value']['boolean'];
 
             if ($result === '1') {
                 return resolve(true);
