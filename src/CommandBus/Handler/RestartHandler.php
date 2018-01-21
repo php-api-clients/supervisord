@@ -7,7 +7,6 @@ namespace ApiClients\Client\Supervisord\CommandBus\Handler;
 use ApiClients\Client\Supervisord\CommandBus\Command\RestartCommand;
 use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
-use function React\Promise\resolve;
 
 final class RestartHandler
 {
@@ -30,10 +29,6 @@ final class RestartHandler
      */
     public function handle(RestartCommand $command): PromiseInterface
     {
-        return $this->service->call('supervisor.restart')->then(function (array $xml) {
-            $status = (bool)$xml['value']['boolean'];
-
-            return resolve($status);
-        });
+        return $this->service->call('supervisor.restart');
     }
 }

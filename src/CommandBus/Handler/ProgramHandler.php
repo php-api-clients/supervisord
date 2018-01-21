@@ -46,7 +46,7 @@ final class ProgramHandler
                 $command->getName(),
             ]
         )->then(function (array $xml) {
-            $program = $xml['value']['struct']['member'];
+            $program = $xml['struct']['member'];
 
             return resolve(
                 $this->hydrator->hydrate(

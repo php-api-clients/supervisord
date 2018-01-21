@@ -7,7 +7,6 @@ namespace ApiClients\Client\Supervisord\CommandBus\Handler;
 use ApiClients\Client\Supervisord\CommandBus\Command\ShutdownCommand;
 use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
-use function React\Promise\resolve;
 
 final class ShutdownHandler
 {
@@ -30,10 +29,6 @@ final class ShutdownHandler
      */
     public function handle(ShutdownCommand $command): PromiseInterface
     {
-        return $this->service->call('supervisor.shutdown')->then(function (array $xml) {
-            $status = (bool)$xml['value']['boolean'];
-
-            return resolve($status);
-        });
+        return $this->service->call('supervisor.shutdown');
     }
 }

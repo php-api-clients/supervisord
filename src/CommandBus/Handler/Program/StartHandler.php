@@ -9,7 +9,6 @@ use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Foundation\Hydrator\Hydrator;
 use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
-use function React\Promise\resolve;
 
 final class StartHandler
 {
@@ -44,18 +43,6 @@ final class StartHandler
             [
                 $command->getName(),
             ]
-        )->then(function (array $xml) {
-            $result = $xml['value']['boolean'];
-
-            if ($result === '1') {
-                return resolve(true);
-            }
-
-            if ($result === '0') {
-                return resolve(true);
-            }
-
-            return resolve($result);
-        });
+        );
     }
 }

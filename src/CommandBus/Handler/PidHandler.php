@@ -7,7 +7,6 @@ namespace ApiClients\Client\Supervisord\CommandBus\Handler;
 use ApiClients\Client\Supervisord\CommandBus\Command\PidCommand;
 use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
-use function React\Promise\resolve;
 
 final class PidHandler
 {
@@ -30,10 +29,6 @@ final class PidHandler
      */
     public function handle(PidCommand $command): PromiseInterface
     {
-        return $this->service->call('supervisor.getPID')->then(function (array $xml) {
-            $pid = (int)$xml['value']['int'];
-
-            return resolve($pid);
-        });
+        return $this->service->call('supervisor.getPID');
     }
 }

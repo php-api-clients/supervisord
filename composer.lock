@@ -617,12 +617,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/xml-rpc-service.git",
-                "reference": "262efd7191c0cc79223a7dc3582a6af3ef570968"
+                "reference": "aed5c0c9af8c4e72af7467ccf6da39259cbb746f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/xml-rpc-service/zipball/262efd7191c0cc79223a7dc3582a6af3ef570968",
-                "reference": "262efd7191c0cc79223a7dc3582a6af3ef570968",
+                "url": "https://api.github.com/repos/php-api-clients/xml-rpc-service/zipball/aed5c0c9af8c4e72af7467ccf6da39259cbb746f",
+                "reference": "aed5c0c9af8c4e72af7467ccf6da39259cbb746f",
                 "shasum": ""
             },
             "require": {
@@ -650,7 +650,7 @@
                 }
             ],
             "description": "Service for making XML RPC requests",
-            "time": "2018-01-20T20:15:32+00:00"
+            "time": "2018-01-21T20:39:15+00:00"
         },
         {
             "name": "clue/block-react",
@@ -4462,16 +4462,16 @@
         },
         {
             "name": "pimple/pimple",
-            "version": "v3.2.2",
+            "version": "v3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Pimple.git",
-                "reference": "4d45fb62d96418396ec58ba76e6f065bca16e10a"
+                "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/4d45fb62d96418396ec58ba76e6f065bca16e10a",
-                "reference": "4d45fb62d96418396ec58ba76e6f065bca16e10a",
+                "url": "https://api.github.com/repos/silexphp/Pimple/zipball/9e403941ef9d65d20cba7d54e29fe906db42cf32",
+                "reference": "9e403941ef9d65d20cba7d54e29fe906db42cf32",
                 "shasum": ""
             },
             "require": {
@@ -4508,7 +4508,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2017-07-23T07:32:15+00:00"
+            "time": "2018-01-21T07:42:36+00:00"
         },
         {
             "name": "psr/log",

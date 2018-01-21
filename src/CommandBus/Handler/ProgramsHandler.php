@@ -41,7 +41,7 @@ final class ProgramsHandler
     public function handle(ProgramsCommand $command): PromiseInterface
     {
         return $this->service->call('supervisor.getAllProcessInfo')->then(function (array $xml) {
-            $xml = $xml['value']['array']['data']['value'];
+            $xml = $xml['array']['data']['value'];
 
             if (key($xml) === 'struct') {
                 $xml = [$xml];
