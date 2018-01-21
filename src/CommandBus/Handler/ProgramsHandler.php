@@ -41,29 +41,13 @@ final class ProgramsHandler
     public function handle(ProgramsCommand $command): PromiseInterface
     {
         return $this->service->call('supervisor.getAllProcessInfo')->then(function (array $xml) {
-            $xml = $xml['array']['data']['value'];
-
-            if (key($xml) === 'struct') {
-                $xml = [$xml];
-            }
-
             return resolve(
                 observableFromArray(
                     $xml
                 )->map(function ($program) {
-                    $program = $program['struct']['member'];
-
                     return $this->hydrator->hydrate(
                         ProgramInterface::HYDRATE_CLASS,
-                        (function (array $program) {
-                            $data = [];
-
-                            foreach ($program as $item) {
-                                $data[$item['name']] = $item['value'][key($item['value'])];
-                            }
-
-                            return $data;
-                        })($program)
+                        $program
                     );
                 })
             );

@@ -45,21 +45,11 @@ final class ProgramHandler
             [
                 $command->getName(),
             ]
-        )->then(function (array $xml) {
-            $program = $xml['struct']['member'];
-
+        )->then(function (array $program) {
             return resolve(
                 $this->hydrator->hydrate(
                     ProgramInterface::HYDRATE_CLASS,
-                    (function (array $program) {
-                        $data = [];
-
-                        foreach ($program as $item) {
-                            $data[$item['name']] = $item['value'][key($item['value'])];
-                        }
-
-                        return $data;
-                    })($program)
+                    $program
                 )
             );
         });
