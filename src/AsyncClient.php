@@ -9,6 +9,7 @@ use ApiClients\Client\Supervisord\CommandBus\Command\PidCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\RestartCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ShutdownCommand;
+use ApiClients\Client\Supervisord\CommandBus\Command\VersionCommand;
 use ApiClients\Foundation\ClientInterface;
 use ApiClients\Foundation\Factory;
 use ApiClients\Foundation\Resource\ResourceInterface;
@@ -68,6 +69,11 @@ final class AsyncClient implements AsyncClientInterface
     public function APIVersion(): CancellablePromiseInterface
     {
         return $this->client->handle(new APIVersionCommand());
+    }
+
+    public function version(): CancellablePromiseInterface
+    {
+        return $this->client->handle(new VersionCommand());
     }
 
     public function pid(): CancellablePromiseInterface

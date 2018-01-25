@@ -11,6 +11,8 @@ interface AsyncClientInterface
 {
     public function APIVersion(): CancellablePromiseInterface;
 
+    public function version(): CancellablePromiseInterface;
+
     public function pid(): CancellablePromiseInterface;
 
     public function shutdown(): CancellablePromiseInterface;
