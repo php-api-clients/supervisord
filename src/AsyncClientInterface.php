@@ -13,6 +13,8 @@ interface AsyncClientInterface
 
     public function version(): CancellablePromiseInterface;
 
+    public function identification(): CancellablePromiseInterface;
+
     public function pid(): CancellablePromiseInterface;
 
     public function shutdown(): CancellablePromiseInterface;

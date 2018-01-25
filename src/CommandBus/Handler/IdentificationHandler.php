@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace ApiClients\Client\Supervisord\CommandBus\Handler;
 
-use ApiClients\Client\Supervisord\CommandBus\Command\VersionCommand;
+use ApiClients\Client\Supervisord\CommandBus\Command\IdentificationCommand;
 use ApiClients\Tools\Services\XmlRpc\XmlRpcService;
 use React\Promise\PromiseInterface;
 
-final class VersionHandler
+final class IdentificationHandler
 {
     /**
      * @var XmlRpcService
@@ -24,11 +24,11 @@ final class VersionHandler
     }
 
     /**
-     * @param  VersionCommand   $command
+     * @param  IdentificationCommand $command
      * @return PromiseInterface
      */
-    public function handle(VersionCommand $command): PromiseInterface
+    public function handle(IdentificationCommand $command): PromiseInterface
     {
-        return $this->service->call('supervisor.getSupervisorVersion');
+        return $this->service->call('supervisor.getIdentification');
     }
 }

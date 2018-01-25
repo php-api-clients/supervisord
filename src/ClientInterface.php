@@ -10,6 +10,8 @@ interface ClientInterface
 
     public function version(): string;
 
+    public function identification(): string;
+
     public function pid(): int;
 
     public function restart(): bool;

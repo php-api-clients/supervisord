@@ -70,6 +70,17 @@ final class Client implements ClientInterface
     }
 
     /**
+     * @return string
+     */
+    public function identification(): string
+    {
+        return await(
+            $this->client->identification(),
+            $this->loop
+        );
+    }
+
+    /**
      * @return int
      */
     public function pid(): int

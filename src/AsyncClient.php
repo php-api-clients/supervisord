@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace ApiClients\Client\Supervisord;
 
 use ApiClients\Client\Supervisord\CommandBus\Command\APIVersionCommand;
+use ApiClients\Client\Supervisord\CommandBus\Command\IdentificationCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\PidCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\RestartCommand;
@@ -74,6 +75,11 @@ final class AsyncClient implements AsyncClientInterface
     public function version(): CancellablePromiseInterface
     {
         return $this->client->handle(new VersionCommand());
+    }
+
+    public function identification(): CancellablePromiseInterface
+    {
+        return $this->client->handle(new IdentificationCommand());
     }
 
     public function pid(): CancellablePromiseInterface
