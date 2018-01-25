@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ApiClients\Client\Supervisord;
 
+use ApiClients\Client\Supervisord\CommandBus\Command\APIVersionCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\PidCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\RestartCommand;
@@ -62,6 +63,11 @@ final class AsyncClient implements AsyncClientInterface
     public function extract(ResourceInterface $resource): CancellablePromiseInterface
     {
         return $this->client->extract($resource);
+    }
+
+    public function APIVersion(): CancellablePromiseInterface
+    {
+        return $this->client->handle(new APIVersionCommand());
     }
 
     public function pid(): CancellablePromiseInterface

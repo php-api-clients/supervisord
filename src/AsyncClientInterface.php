@@ -9,6 +9,8 @@ use Rx\Observable;
 
 interface AsyncClientInterface
 {
+    public function APIVersion(): CancellablePromiseInterface;
+
     public function pid(): CancellablePromiseInterface;
 
     public function shutdown(): CancellablePromiseInterface;

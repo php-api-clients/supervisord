@@ -48,6 +48,17 @@ final class Client implements ClientInterface
     }
 
     /**
+     * @return string
+     */
+    public function APIVersion(): string
+    {
+        return await(
+            $this->client->APIVersion(),
+            $this->loop
+        );
+    }
+
+    /**
      * @return int
      */
     public function pid(): int
