@@ -1,0 +1,4 @@
+class: State
+properties:
+  statecode: int
+  statename: string

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace ApiClients\Client\Supervisord;
 
+use ApiClients\Client\Supervisord\Resource\StateInterface;
+
 interface ClientInterface
 {
     public function APIVersion(): string;
@@ -11,6 +13,8 @@ interface ClientInterface
     public function version(): string;
 
     public function identification(): string;
+
+    public function state(): StateInterface;
 
     public function pid(): int;
 

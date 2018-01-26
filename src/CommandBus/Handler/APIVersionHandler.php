@@ -24,7 +24,7 @@ final class APIVersionHandler
     }
 
     /**
-     * @param  APIVersionCommand       $command
+     * @param  APIVersionCommand $command
      * @return PromiseInterface
      */
     public function handle(APIVersionCommand $command): PromiseInterface

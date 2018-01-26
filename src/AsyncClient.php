@@ -10,6 +10,7 @@ use ApiClients\Client\Supervisord\CommandBus\Command\PidCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ProgramsCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\RestartCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ShutdownCommand;
+use ApiClients\Client\Supervisord\CommandBus\Command\StateCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\VersionCommand;
 use ApiClients\Foundation\ClientInterface;
 use ApiClients\Foundation\Factory;
@@ -80,6 +81,11 @@ final class AsyncClient implements AsyncClientInterface
     public function identification(): CancellablePromiseInterface
     {
         return $this->client->handle(new IdentificationCommand());
+    }
+
+    public function state(): CancellablePromiseInterface
+    {
+        return $this->client->handle(new StateCommand());
     }
 
     public function pid(): CancellablePromiseInterface

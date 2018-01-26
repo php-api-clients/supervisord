@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace ApiClients\Client\Supervisord;
 
+use ApiClients\Client\Supervisord\Resource\StateInterface;
 use ApiClients\Foundation\Factory as FoundationClientFactory;
 use React\EventLoop\Factory;
 use React\EventLoop\LoopInterface;
@@ -76,6 +77,17 @@ final class Client implements ClientInterface
     {
         return await(
             $this->client->identification(),
+            $this->loop
+        );
+    }
+
+    /**
+     * @return StateInterface
+     */
+    public function state(): StateInterface
+    {
+        return await(
+            $this->client->state(),
             $this->loop
         );
     }
