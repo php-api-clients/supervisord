@@ -93,6 +93,17 @@ final class Client implements ClientInterface
     }
 
     /**
+     * @return string
+     */
+    public function readLog(int $offset = 0, int $length = 0): string
+    {
+        return await(
+            $this->client->readLog($offset, $length),
+            $this->loop
+        );
+    }
+
+    /**
      * @return int
      */
     public function pid(): int

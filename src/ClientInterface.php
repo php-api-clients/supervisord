@@ -16,6 +16,8 @@ interface ClientInterface
 
     public function state(): StateInterface;
 
+    public function readLog(int $offset = 0, int $length = 0): string;
+
     public function pid(): int;
 
     public function restart(): bool;

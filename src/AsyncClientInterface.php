@@ -17,6 +17,8 @@ interface AsyncClientInterface
 
     public function state(): CancellablePromiseInterface;
 
+    public function readLog(int $offset = 0, int $length = 0): CancellablePromiseInterface;
+
     public function pid(): CancellablePromiseInterface;
 
     public function shutdown(): CancellablePromiseInterface;
