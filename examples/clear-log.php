@@ -6,8 +6,9 @@ require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 
 $client = Client::create(require __DIR__ . DIRECTORY_SEPARATOR . 'resolve_host.php');
 
-if ($client->shutdown()) {
-    echo 'restarted', PHP_EOL;
+
+if ($client->clearLog()) {
+    echo 'log cleared', PHP_EOL;
 
     return;
 }

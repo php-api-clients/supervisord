@@ -8,9 +8,9 @@ require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 $loop = Factory::create();
 $client = AsyncClient::create(require __DIR__ . DIRECTORY_SEPARATOR . 'resolve_host.php', $loop);
 
-$client->shutdown()->done(function (bool $status) {
+$client->clearLog()->done(function (bool $status) {
     if ($status) {
-        echo 'shutdown', PHP_EOL;
+        echo 'log cleared', PHP_EOL;
 
         return;
     }

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace ApiClients\Client\Supervisord;
 
 use ApiClients\Client\Supervisord\CommandBus\Command\APIVersionCommand;
+use ApiClients\Client\Supervisord\CommandBus\Command\ClearLogCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\IdentificationCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\ReadLogCommand;
 use ApiClients\Client\Supervisord\CommandBus\Command\PidCommand;
@@ -92,6 +93,11 @@ final class AsyncClient implements AsyncClientInterface
     public function readLog(int $offset = 0, int $length = 0): CancellablePromiseInterface
     {
         return $this->client->handle(new ReadLogCommand($offset, $length));
+    }
+
+    public function clearLog(): CancellablePromiseInterface
+    {
+        return $this->client->handle(new ClearLogCommand());
     }
 
     public function pid(): CancellablePromiseInterface

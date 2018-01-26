@@ -18,6 +18,8 @@ interface ClientInterface
 
     public function readLog(int $offset = 0, int $length = 0): string;
 
+    public function clearLog(): bool;
+
     public function pid(): int;
 
     public function restart(): bool;

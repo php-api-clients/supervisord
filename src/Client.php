@@ -104,6 +104,17 @@ final class Client implements ClientInterface
     }
 
     /**
+     * @return bool
+     */
+    public function clearLog(): bool
+    {
+        return await(
+            $this->client->clearLog(),
+            $this->loop
+        );
+    }
+
+    /**
      * @return int
      */
     public function pid(): int
