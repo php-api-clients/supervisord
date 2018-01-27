@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c09e13aa0c4c2295a9f5e2953884f073",
+    "content-hash": "e415955e028950638786a59e245d1157",
     "packages": [
         {
             "name": "api-clients/client-services",
@@ -613,16 +613,16 @@
         },
         {
             "name": "api-clients/xml-rpc-service",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/xml-rpc-service.git",
-                "reference": "2c06af86dd7ef743054638bcfcd270b5591b83e4"
+                "reference": "b1f16007302dd6d1a138d35ca2a66efa8a4c648f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/xml-rpc-service/zipball/2c06af86dd7ef743054638bcfcd270b5591b83e4",
-                "reference": "2c06af86dd7ef743054638bcfcd270b5591b83e4",
+                "url": "https://api.github.com/repos/php-api-clients/xml-rpc-service/zipball/b1f16007302dd6d1a138d35ca2a66efa8a4c648f",
+                "reference": "b1f16007302dd6d1a138d35ca2a66efa8a4c648f",
                 "shasum": ""
             },
             "require": {
@@ -650,7 +650,7 @@
                 }
             ],
             "description": "Service for making XML RPC requests",
-            "time": "2018-01-21T21:37:06+00:00"
+            "time": "2018-01-21T21:56:15+00:00"
         },
         {
             "name": "clue/block-react",
@@ -5875,9 +5875,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "api-clients/xml-rpc-service": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

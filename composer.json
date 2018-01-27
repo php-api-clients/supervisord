@@ -17,7 +17,7 @@
         "api-clients/middleware-xml": "^1.0",
         "api-clients/rx": "^2.2",
         "api-clients/transport": "^3.1",
-        "api-clients/xml-rpc-service": "dev-master"
+        "api-clients/xml-rpc-service": "^1.0"
     },
     "require-dev": {
         "api-clients/resource-generator": "^1.0",
