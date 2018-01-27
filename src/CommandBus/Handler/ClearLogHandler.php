@@ -24,7 +24,7 @@ final class ClearLogHandler
     }
 
     /**
-     * @param  ClearLogCommand       $command
+     * @param  ClearLogCommand  $command
      * @return PromiseInterface
      */
     public function handle(ClearLogCommand $command): PromiseInterface

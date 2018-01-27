@@ -24,7 +24,7 @@ final class ReadLogHandler
     }
 
     /**
-     * @param  ReadLogCommand       $command
+     * @param  ReadLogCommand   $command
      * @return PromiseInterface
      */
     public function handle(ReadLogCommand $command): PromiseInterface
