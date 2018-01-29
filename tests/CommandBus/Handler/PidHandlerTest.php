@@ -16,8 +16,8 @@ final class PidHandlerTest extends TestCase
         $service->call('supervisor.getPID')->shouldBeCalled()->willReturn(resolve(123456));
 
         $handler = new PidHandler($service->reveal());
-        $version = $this->await($handler->handle(new PidCommand()));
+        $pid = $this->await($handler->handle(new PidCommand()));
 
-        self::assertSame(123456, $version);
+        self::assertSame(123456, $pid);
     }
 }

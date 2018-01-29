@@ -16,8 +16,8 @@ final class IdentificationHandlerTest extends TestCase
         $service->call('supervisor.getIdentification')->shouldBeCalled()->willReturn(resolve('supervisor'));
 
         $handler = new IdentificationHandler($service->reveal());
-        $version = $this->await($handler->handle(new IdentificationCommand()));
+        $identification = $this->await($handler->handle(new IdentificationCommand()));
 
-        self::assertSame('supervisor', $version);
+        self::assertSame('supervisor', $identification);
     }
 }
