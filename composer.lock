@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e415955e028950638786a59e245d1157",
+    "content-hash": "f01f7dfaa287b6cf842a5fae7a4147d2",
     "packages": [
         {
             "name": "api-clients/client-services",
@@ -253,6 +253,51 @@
             ],
             "description": "Request middleware",
             "time": "2017-06-28T19:24:19+00:00"
+        },
+        {
+            "name": "api-clients/middleware-basic-authorization",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/middleware-basic-authorization.git",
+                "reference": "2b874321b7eb55783d6b772b9d29f4a18c7af87c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-basic-authorization/zipball/2b874321b7eb55783d6b772b9d29f4a18c7af87c",
+                "reference": "2b874321b7eb55783d6b772b9d29f4a18c7af87c",
+                "shasum": ""
+            },
+            "require": {
+                "api-clients/middleware": "^4.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^3.0.1",
+                "ringcentral/psr7": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Middleware\\BasicAuthorization\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                },
+                {
+                    "name": "Jaap van Otterdijk"
+                }
+            ],
+            "description": "Basic authorization middleware",
+            "homepage": "https://php-api-clients.org/middlewares/basic-authorization/",
+            "time": "2017-07-02T14:15:20+00:00"
         },
         {
             "name": "api-clients/middleware-http-exceptions",

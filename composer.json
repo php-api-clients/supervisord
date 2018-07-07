@@ -12,6 +12,7 @@
         "php": "^7.0",
         "api-clients/client-services": "^1.3",
         "api-clients/foundation": "^1.0",
+        "api-clients/middleware-basic-authorization": "^3.0",
         "api-clients/middleware-http-exceptions": "^2.0",
         "api-clients/middleware-user-agent": "^2.0",
         "api-clients/middleware-xml": "^1.0",
