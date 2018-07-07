@@ -7,6 +7,8 @@ namespace ApiClients\Client\Supervisord;
 use ApiClients\Foundation\Hydrator\Options as HydratorOptions;
 use ApiClients\Foundation\Options as FoundationOptions;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
+use ApiClients\Middleware\BasicAuthorization\BasicAuthorizationHeaderMiddleware;
+use ApiClients\Middleware\BasicAuthorization\Options as BasicAuthorizationHeaderMiddlewareOptions;
 use ApiClients\Middleware\HttpExceptions\HttpExceptionsMiddleware;
 use ApiClients\Middleware\UserAgent\Options as UserAgentMiddlewareOptions;
 use ApiClients\Middleware\UserAgent\UserAgentMiddleware;
@@ -46,10 +48,21 @@ final class ApiSettings
         $options = options_merge(self::TRANSPORT_OPTIONS, $suppliedOptions);
         $options[FoundationOptions::HYDRATOR_OPTIONS][HydratorOptions::NAMESPACE_SUFFIX] = $suffix;
 
-        list($ip, $port) = explode(':', $host);
+        $transportOptions = $options[FoundationOptions::TRANSPORT_OPTIONS];
 
-        $options[FoundationOptions::TRANSPORT_OPTIONS][TransportOptions::HOST] = $ip;
-        $options[FoundationOptions::TRANSPORT_OPTIONS][TransportOptions::PORT] = $port;
+        list($ip, $port) = explode(':', $host);
+        $transportOptions[TransportOptions::HOST] = $ip;
+        $transportOptions[TransportOptions::PORT] = $port;
+
+        if (isset($suppliedOptions[Options::USERNAME])) {
+            $transportOptions[TransportOptions::MIDDLEWARE][] = BasicAuthorizationHeaderMiddleware::class;
+            $transportOptions[TransportOptions::DEFAULT_REQUEST_OPTIONS][BasicAuthorizationHeaderMiddleware::class] = [
+                BasicAuthorizationHeaderMiddlewareOptions::USERNAME => $suppliedOptions[Options::USERNAME],
+                BasicAuthorizationHeaderMiddlewareOptions::PASSWORD => $suppliedOptions[Options::PASSWORD] ?? '',
+            ];
+        }
+
+        $options[FoundationOptions::TRANSPORT_OPTIONS] = $transportOptions;
 
         return $options;
     }
